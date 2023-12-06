@@ -28,4 +28,16 @@ public class SealedClassTest {
         Square square = new Square();
         assertEquals(square.side, 8D);
     }
+
+    @Test
+    void testShapeHierarchy() {
+        Shape circle = new Circle();
+        Shape square = new Square();
+        Shape triangle = new Triangle();
+
+        assertTrue(circle instanceof Circle);
+        assertTrue(square instanceof Square);
+        assertTrue(triangle instanceof Triangle);
+    }
+
 }
